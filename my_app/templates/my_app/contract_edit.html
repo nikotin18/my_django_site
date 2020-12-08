@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Добавление записей в Contracts</title>
+        </head>
+            <body>
+                <h1>Новая запись в Contracts</h1>
+                <form method="POST" class="contract-form"> {% csrf_token %} {{ form.as_p }}
+                    <button type="submit">Добавить</button>
+                </form>
+            </body>
+</html>
