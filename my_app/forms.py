@@ -1,9 +1,18 @@
 from django import forms
-from .models import Client
-from .models import Product
-from .models import Contract
+from .models import Client, Product, Order
 
-class ContractForm(forms.ModelForm):
+class ClientForm(forms.ModelForm):
     class Meta:
-        model = Contract
-        fields = ('client', 'product', 'quantity',)
+        model = Client
+        fields = ('first_name', 'last_name', 'middle_name', 'phone_number',)
+
+class ProductForm(forms.ModelForm):
+    class Meta:
+        model = Product
+        fields = ('name', 'price', 'stored',)
+
+class OrderForm(forms.ModelForm):
+    class Meta:
+        model = Order
+        fields = ('client', 'product', 'quantity', 'date',)
+

@@ -1,0 +1,31 @@
+{% load static %}
+<html>
+    <head>
+        <title>Управление заказами</title>
+        <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    </head>
+
+    <body>
+        <div class="nav">
+            <a href="/"><img src="{% static 'img/logo_transparent.png'%}"></a>
+            <a href="/clients/"><div>Список клиентов</div></a>
+            <a href="/products/"><div>Список товаров</div></a>
+            <a href="/orders/"><div>Список заказов</div></a>
+
+            <a href="/clients/new/"><div>Добавить клиента</div></a>
+            <a href="/products/new/"><div>Добавить товар</div></a>
+            <a href="/orders/new/"><div>Добавить заказ</div></a>
+        </div>
+
+        <div class="content">
+            <table>
+                <tr>
+                    <th>Полное имя</th>
+                    <th>Телефон</th>
+                </tr>
+                {{ table|safe }}
+            </table>
+        </div>
+
+    </body>
+</html>

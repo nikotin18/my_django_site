@@ -26,7 +26,10 @@ SECRET_KEY = '&vcnc0p_*^8m)d-z664zld1gq9^@1f1fo)8(-7$6+=ox)xr*q6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["nikotin18.pythonanywhere.com"]
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "nikotin18.pythonanywhere.com",
+]
 
 
 # Application definition
